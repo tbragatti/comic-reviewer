@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ComicReviewer.Api/ComicReviewer.Api.csproj"/>
+  <Project Path="ComicReviewer.Domain/ComicReviewer.Domain.csproj"/>
+  <Project Path="ComicReviewer.Infra/ComicReviewer.Infra.csproj"/>
+</Solution>

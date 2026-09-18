@@ -1,0 +1,21 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+
+# IDE settings
+.vs/
+
+# Local configuration and secrets
+appsettings.Local.json
+*.Development.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local project context
+comic-reviewer-context.md
