@@ -19,7 +19,7 @@ public class GoogleBooksController : ControllerBase
     }
 
     [HttpGet] 
-    public async Task<IActionResult> GetComics([FromBody]string query)
+    public async Task<IActionResult> GetComics([FromQuery]string query)
     {
         var url = _configuration.GetValue<string>("GoogleBooks:BaseUrl");
         var apiKey = _configuration.GetValue<string>("API_KEY_GOOGLE");
@@ -31,6 +31,7 @@ public class GoogleBooksController : ControllerBase
         if(response.IsSuccessStatusCode)
         {
             var content = await response.Content.ReadAsStringAsync();
+
             GoogleResponse quadrinho = JsonSerializer.Deserialize<GoogleResponse>(content);
 
             return Ok(quadrinho);
